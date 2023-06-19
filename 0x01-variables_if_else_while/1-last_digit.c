@@ -2,7 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 
-/*
+/**
+ * main - Entry point
+ *
  * main - Prints the last digit of a randomly generated number
  *        and stored in the variable n
  * Return: Always 0.
@@ -29,5 +31,4 @@ int main(void)
 	n, n % 10);
 	}
 	return (0);
-
 }
