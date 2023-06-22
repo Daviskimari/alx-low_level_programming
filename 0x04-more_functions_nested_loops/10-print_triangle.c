@@ -1,26 +1,31 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - Entry piont
- * Return: Always 0
+ * print_triangle - prints a triangle, followed by a new line
+ * @size: size of the triangle
  */
-int main(void)
+void print_triangle(int size)
 {
-	int i = 1;
-
-	for (; i < 100 ; i++)
+	if (size <= 0)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
-			printf("FizzBuzz ");
-		else if (i % 3 == 0)
-			printf("Fizz ");
-		else if (i % 5 == 0)
-			printf("Buzz ");
-		else
-			printf("%d ", i);
+		_putchar('\n');
 	}
-	printf("Buzz\n");
+	else
+	{
+		int i, j;
 
-	return (0);
+		for (i = 1; i <= size; i++)
+		{
+			for (j = i; j < size; j++)
+			{
+				_putchar(' ');
+			}
+			for (j = 1; j <= i; j++)
+			{
+				_putchar('#');
+			}
+
+			_putchar('\n');
+		}
+	}
 }
